@@ -1,4 +1,5 @@
-import awt.Image;import java.awt.Graphics
+import java.awt.Image;
+import java.awt.Graphics;
 
 public class Coin {
 	private Image heads;
@@ -7,7 +8,7 @@ public class Coin {
 
 	public Coin(Image headsImg, Image tailsImg) {
 		heads = headsImg;
-		tail = tailsImg;
+		tails = tailsImg;
 	}
 
 	public void flip(){
@@ -17,6 +18,7 @@ public class Coin {
 		else {
 			currentFace = 0;
 		}
+	}
 
 	public void draw(Graphics g, int x, int y) {
 		if (currentFace == 0) {
@@ -27,4 +29,4 @@ public class Coin {
 	}
 }
 
-}
+

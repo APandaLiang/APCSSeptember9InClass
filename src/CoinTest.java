@@ -13,11 +13,15 @@ import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
 public class CoinTest extends JPanel implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Coin coin;
 
 	public CoinTest() {
-		Image heads = (new ImageIcon("heads.gif")).getImage();
-		Image tails = (new ImageIcon("tails.gif")).getImage();
+		Image heads = (new ImageIcon(this.getClass().getResource("/heads.png"))).getImage();
+		Image tails = (new ImageIcon(this.getClass().getResource("/tails.png"))).getImage();
 		coin = new Coin(heads, tails);
 
 		Timer clock = new Timer(2000, this);
